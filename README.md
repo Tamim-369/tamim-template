@@ -1,4 +1,4 @@
-# Sparkpress Express js template
+# Tamim Express js template
 
 Note: The project is still under development so it's possible to see unexpected errors.
 
