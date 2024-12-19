@@ -2,10 +2,10 @@
 
 Note: The project is still under development so it's possible to see unexpected errors.
 
-This is a next level express js template inspired by [typescript-mongoose-express-backend-template
-](https://github.com/siffahim/typescript-mongoose-express-backend-template)
+This is a next level express js template which is fully compatible with tamim-cli and it has all the basic things you need to create express js APIs with typescript.
 
 ## Features
+
 - **Automatic module generation:** Auto generate API modules and thier postman requests .
 - **Authentication API:** Complete authentication system using JWT for secure token-based authentication and bcrypt for password hashing.
 - **File Upload:** Implemented using Multer with efficient file handling and short-term storage.
