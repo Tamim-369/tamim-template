@@ -5,6 +5,7 @@ import fileUploadHandler from '../../middlewares/fileUploadHandler';
 import validateRequest from '../../middlewares/validateRequest';
 import { UserController } from './user.controller';
 import { UserValidation } from './user.validation';
+import validateRequestZFD from '../../middlewares/validateRequestZFD';
 const router = express.Router();
 
 router.get(
@@ -21,6 +22,7 @@ router
   )
   .patch(
     auth(USER_ROLES.ADMIN, USER_ROLES.USER),
+    validateRequestZFD(UserValidation.updateUserZodSchema),
     fileUploadHandler(),
     UserController.updateProfile
   );

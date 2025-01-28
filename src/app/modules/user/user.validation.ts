@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { zfd } from 'zod-form-data';
 
 const createUserZodSchema = z.object({
   body: z.object({
@@ -11,6 +12,16 @@ const createUserZodSchema = z.object({
   }),
 });
 
+const updateUserZodSchema = zfd.formData({
+  name: zfd.text().optional(),
+  contact: zfd.text().optional(),
+  email: zfd.text().optional(),
+  password: zfd.text().optional(),
+  location: zfd.text().optional(),
+  profile: zfd.file().optional(),
+});
+
 export const UserValidation = {
   createUserZodSchema,
+  updateUserZodSchema,
 };
