@@ -22,8 +22,8 @@ router
   )
   .patch(
     auth(USER_ROLES.ADMIN, USER_ROLES.USER),
-    validateRequestZFD(UserValidation.updateUserZodSchema),
     fileUploadHandler(),
+    validateRequestZFD(UserValidation.updateUserZodSchema),
     UserController.updateProfile
   );
 
